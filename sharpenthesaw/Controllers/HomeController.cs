@@ -25,9 +25,11 @@ namespace sharpenthesaw.Controllers
 
         public IActionResult Index(long? teamid, string teamname, int pagenum = 0)
         {
+            //five bowlers per page
             int pagesize = 5;
             return View(new IndexViewModel
             {
+                //this is a query for to get bowlers by their team id to joiin them with their team name
                 bowlers = context.Bowlers.Where(m => m.TeamId == teamid || teamid == null).OrderBy(m => m.BowlerFirstName).Skip((pagenum - 1) * pagesize).Take(pagesize).ToList(),
 
                 pageNumberingInfo = new PageNumberingInfo

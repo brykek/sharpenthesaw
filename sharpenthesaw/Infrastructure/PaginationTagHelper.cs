@@ -26,7 +26,7 @@ namespace sharpenthesaw.Infrastructure
         [HtmlAttributeName(DictionaryAttributePrefix ="page-url-")]
         public Dictionary<string, object> KeyValuePairs { get; set; } = new Dictionary<string, object>();
 
-
+        //css properties
         public bool PageClassesEnabled { get; set; } = false;
         public string PageClass { get; set; }
         public string PageClassNormal { get; set; }
@@ -39,10 +39,10 @@ namespace sharpenthesaw.Infrastructure
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             IUrlHelper urlHelp = urlinfo.GetUrlHelper(ViewContext);
-
+            //creates a div for pagination
             TagBuilder finishedTag = new TagBuilder("div");
 
-
+            //for loop for each page
             for (int i =1; i <= PageInfo.NumPages; i++)
             {
                 
@@ -53,6 +53,7 @@ namespace sharpenthesaw.Infrastructure
 
                 if (PageClassesEnabled)
                 {
+                    //styling when a div is selected
                     individualTag.AddCssClass(PageClass);
                     individualTag.AddCssClass(i == PageInfo.CurrentPage ? PageClassSelected : PageClassNormal);
                 }
