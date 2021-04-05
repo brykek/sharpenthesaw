@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sharpenthesaw", "sharpenthesaw\sharpenthesaw.csproj", "{76C08572-93E5-48F6-A914-3C60AF734E72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76C08572-93E5-48F6-A914-3C60AF734E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C08572-93E5-48F6-A914-3C60AF734E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C08572-93E5-48F6-A914-3C60AF734E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C08572-93E5-48F6-A914-3C60AF734E72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C26D5484-6135-4629-ADC5-5E0EB29B0AB5}
+	EndGlobalSection
+EndGlobal

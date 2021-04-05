@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+@model IndexViewModel
+
+<h1>@Model.TeamName</h1>
+
+<table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col" class="p-2">First Name</th>
+            <th scope="col" class="p-2">Middle Name</th>
+            <th scope="col" class="p-2">Last Name</th>
+            <th scope="col" class="p-2">Address</th>
+            <th scope="col" class="p-2">City</th>
+            <th scope="col" class="p-2">State</th>
+            <th scope="col" class="p-2">Zip Code</th>
+            <th scope="col" class="p-2">Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model.bowlers)
+        {
+            <tr>
+
+                <td scope="row" class="p-2">@x.BowlerFirstName</td>
+                <td scope="row" class="p-2">@x.BowlerMiddleInit</td>
+                <td scope="row" class="p-2">@x.BowlerLastName</td>
+                <td scope="row" class="p-2">@x.BowlerAddress</td>
+                <td scope="row" class="p-2">@x.BowlerCity</td>
+                <td scope="row" class="p-2">@x.BowlerState</td>
+                <td scope="row" class="p-2">@x.BowlerZip</td>
+                <td scope="row" class="p-2">@x.BowlerPhoneNumber</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<div page-info="@Model.pageNumberingInfo" page-url-teamname="@Model.TeamName" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-info" page-class-selected="btn btn-info" class="btn-group pull-right m-1">
+
+</div>
+
