@@ -27,6 +27,7 @@ namespace sharpenthesaw
         {
             services.AddControllersWithViews();
 
+            //connect sqlite  file to dbcontext
             services.AddDbContext<BowlingLeagueContext>(options =>
             options.UseSqlite(Configuration["ConnectionStrings:BowlingDbConnection"]));
         }
@@ -53,16 +54,16 @@ namespace sharpenthesaw
 
             app.UseEndpoints(endpoints =>
             {
-
+                //endpoint for filtering by team name with pagination
                 endpoints.MapControllerRoute("teamnamepagenum",
                     "TeamName/{teamid}/{teamname}/{pagenum}",
                     new { Controller = "Home", action = "Index"});
-
+                //endpoint for filtering by team name
                 endpoints.MapControllerRoute("teamid",
                 "Team/{teamid}/{teamname}",
                 new { Controller = "Home", action = "Index", pagenum = 1 }
                 ) ;
-
+                //endpoint for pagination
                 endpoints.MapControllerRoute("pagenum",
                     "All/{pagenum}",
                     new { Controller = "Home", action = "Index" });
